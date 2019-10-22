@@ -6,7 +6,9 @@ Node.js app as Docker image to convert Fortify SCA CSV output to SonarQube Gener
 
 Available as the Docker image `coveros/fortify-to-sonarqube`
 
-> docker pull coveros/fortify-to-sonarqube
+```
+$ docker pull coveros/fortify-to-sonarqube
+```
 
 ### Transform Fortify CSV to SonarQube JSON
 
@@ -16,7 +18,9 @@ expects the input file to be `/app/date/input.csv`, and will output to `/app/dat
 To use these default settings, place the input file at `/host/path/to/files/input.csv` on your machine, and run the
 following command:
 
-> docker run --rm -v /host/path/to/files:/app/data coveros/fortify-to-sonarqube
+```
+$ docker run --rm -v /host/path/to/files:/app/data coveros/fortify-to-sonarqube
+```
 
 The JSON output will be availabe at `/host/path/to/files/output.json`
 
@@ -24,7 +28,9 @@ To specify the names of the input and output files, execute the `transform` comm
 both as input arguments. For example, if you have an input file `/host/path/to/files/custom-input-name.csv` and you would
 like to generate `/host/path/to/files/custom-output-name.json`, run the following command:
 
-> docker run --rm -v /host/path/to/files:/app/data coveros/fortify-to-sonarqube transform -i /app/data/custom-input-name.csv -o /app/data/custom-output-name.json
+```
+$ docker run --rm -v /host/path/to/files:/app/data coveros/fortify-to-sonarqube transform -i /app/data/custom-input-name.csv -o /app/data/custom-output-name.json
+```
 
 ### Use in Jenkins Pipeline
 
@@ -95,7 +101,9 @@ IID, category, path, analyzer
 
 To compile the Typescript source into distributable Javascript
 
-> npm run tsc
+```
+$ npm run tsc
+```
 
 Compiled Javascript located in the `dist` directory 
 
@@ -103,31 +111,42 @@ Compiled Javascript located in the `dist` directory
 
 Application uses Jest for unit testing
 
-> npm run test
+```
+$ npm run test
+```
 
 #### Lint
 
 Application uses TSLint for code quality analysis
 
-> npm run lint 
+```
+$ npm run lint 
+```
 
 #### Run
 
 Run the application, specifying the input file and output file location
 
-> npm run start -- -i /path/to/input.csv -o /path/to/output.json
+```
+$ npm run start -- -i /path/to/input.csv -o /path/to/output.json
+```
 
 or...
 
-> node dist/index.js -i /path/to/input.csv -o /path/to/output.json
+```
+$ node dist/index.js -i /path/to/input.csv -o /path/to/output.json
+```
 
 For example
 
-> npm run start -- -i ./test/testinput.csv -o ./test/testoutput.json
+```
+$ npm run start -- -i ./test/testinput.csv -o ./test/testoutput.json
+```
 
 #### Build Docker Image
 
 To build the docker image `coveros/fortify-to-sonarqube:latest`
 
-> docker build -t coveros/fortify-to-sonarqube:latest .
-
+```
+$ docker build -t coveros/fortify-to-sonarqube:latest .
+```

@@ -1,0 +1,42 @@
+{
+  "name": "@coveros/fortify-to-sonarqube",
+  "version": "1.0.0",
+  "description": "Convert Fortify SCA CSV output to SonarQube Generic Issue JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "tsc": "tsc",
+    "start": "node dist/index.js",
+    "lint": "tslint -p ./tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/justin-coveros/fortify-to-sonarqube.git"
+  },
+  "author": "Coveros, Inc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Coveros/fortify-to-sonarqube/issues"
+  },
+  "homepage": "https://https://github.com/Coveros/fortify-to-sonarqube#readme",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "dependencies": {
+    "@types/node": "^12.11.2",
+    "commander": "^3.0.2",
+    "csv-parse": "^4.6.5",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
+}

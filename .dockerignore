@@ -1,0 +1,8 @@
+.*
+dist
+node_modules
+jest.config.js
+tslint.json
+README.md
+docker-build.sh
+test

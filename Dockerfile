@@ -16,9 +16,9 @@ WORKDIR /app
 
 COPY --from=build /src/dist /app
 COPY --from=build /src/node_modules /app/node_modules
-COPY transform.sh /usr/local/bin/transform
 
-RUN chmod u+x /usr/local/bin/transform
+RUN chmod u+x /app/index.js \
+  && ln -s /app/index.js /usr/local/bin/transform
 
 VOLUME /app/data
 

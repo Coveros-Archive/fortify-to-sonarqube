@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import * as program from "commander";
 import {CsvIssue} from "./interfaces";
 import {outputJson, parseCsv, transformIssue} from "./lib";

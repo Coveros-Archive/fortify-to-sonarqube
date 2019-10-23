@@ -4,7 +4,7 @@ Node.js app as Docker image to convert Fortify SCA CSV output to SonarQube Gener
 
 ### Distributable Docker Image
 
-Available as the Docker image `coveros/fortify-to-sonarqube`
+Available as the Docker image `coveros/fortify-to-sonarqube`: https://hub.docker.com/r/coveros/fortify-to-sonarqube
 
 ```
 $ docker pull coveros/fortify-to-sonarqube

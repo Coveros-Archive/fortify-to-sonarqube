@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/justin-coveros/fortify-to-sonarqube.git"
+    "url": "git+ssh://git@gitlab.com/Coveros/fortify-to-sonarqube.git"
   },
   "author": "Coveros, Inc",
   "license": "ISC",
